@@ -41,6 +41,12 @@ color brightwhite,blue start="\$\{" end="\}"
 ## Escapes
 color red "\\[0-7][0-7]?[0-7]?|\\x[0-9a-fA-F]+|\\[bfnrt'"\?\\]"
 
+## Parenthetical olor
+color brightmagenta "[(){}]" "\[" "\]"
+
+## Operator color
+color red "[+*|=!\/%]" "<" ">" "-" "&"
+
 ## Comments
 color brightblack start="/\*" end="\*/"
 color brightblack "^\s*//.*$"
