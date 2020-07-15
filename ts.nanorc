@@ -1,0 +1,49 @@
+syntax "typescript" "\.(ts)$"
+header "^#!.*\/(env +)ts-node"
+
+## Default
+color white "^.+$"
+
+## Decimal, cotal and hexadecimal numbers
+color yellow "\<[-+]?([1-9][0-9]*|0[0-7]*|0x[0-9a-fA-F]+)([uU][lL]?|[lL][uU]?)?\>"
+
+## Floating point number with at least one digit before decimal point
+color yellow "\<[-+]?([0-9]+\.[0-9]*|[0-9]*\.[0-9]+)([EePp][+-]?[0-9]+)?[fFlL]?"
+color yellow "\<[-+]?([0-9]+[EePp][+-]?[0-9]+)[fFlL]?"
+
+## Keywords
+color yellow "\<(boolean|string|number|undefined|any|void|enum)\>"
+color green "\<(as|abstract|asserts|break|byte|case|catch)\>"
+color green "\<(class|const|continue|debugger|delete|readonly)\>"
+color green "\<(do|else|extends|finally|final|for)\>"
+color green "\<(goto|if|implements|instanceof)\>"
+color green "\<(var|interface|int|in|is|infer|let|new|package|private)\>"
+color green "\<(protected|public|return|static|super|switch)\>"
+color green "\<(this|throw|try|typeof|type)\>"
+color green "\<(while|with|yield)\>"
+color magenta "\<(async|await|function)\>"
+color green "\<(set|get)\>"
+color green "\<(module|namespace)\>"
+color green "\<(declare)\>"
+color cyan "\<(import|from|export|default)\>"
+
+## Type specifiers
+color red "\<(Array|Boolean|Date|Enumerator|Error|Function)\>"
+color red "\<(Number|Object|RegExp|String)\>"
+color magenta "\<(true|false)\>"
+
+## String
+color brightyellow "L?\"(\\"|[^"])*\""
+color brightyellow "L?'(\'|[^'])*'"
+color brightcyan "L?`(\`|[^`])*`"
+color brightwhite,blue start="\$\{" end="\}"
+
+## Escapes
+color red "\\[0-7][0-7]?[0-7]?|\\x[0-9a-fA-F]+|\\[bfnrt'"\?\\]"
+
+## Comments
+color brightblack start="/\*" end="\*/"
+color brightblack "^\s*//.*$"
+
+## Trailing whitespace
+color ,green "[[:space:]]+$"
