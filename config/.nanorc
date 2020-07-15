@@ -1,3 +1,4 @@
+set locking true
 set tabsize 2
 set linenumbers true
 set mouse false
