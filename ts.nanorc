@@ -24,12 +24,12 @@ color green "\<(while|with|yield)\>"
 color magenta "\<(async|await|function)\>"
 color green "\<(set|get)\>"
 color green "\<(module|namespace)\>"
-color green "\<(declare)\>"
+color green "\<(declare|parse|stringify)\>"
 color cyan "\<(import|from|export|default)\>"
 
 ## Type specifiers
 color red "\<(Array|Boolean|Date|Enumerator|Error|Function)\>"
-color red "\<(Number|Object|RegExp|String)\>"
+color red "\<(Number|Object|RegExp|String|JSON)\>"
 color magenta "\<(true|false)\>"
 
 ## String
@@ -42,7 +42,7 @@ color brightwhite,blue start="\$\{" end="\}"
 color red "\\[0-7][0-7]?[0-7]?|\\x[0-9a-fA-F]+|\\[bfnrt'"\?\\]"
 
 ## Parenthetical olor
-color brightmagenta "[(){}]" "\[" "\]"
+color brightmagenta "[(){}]" "\[" "\]" "\$"
 
 ## Operator color
 color red "[+*|=!\/%]" "<" ">" "-" "&"
