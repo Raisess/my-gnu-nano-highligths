@@ -24,7 +24,8 @@ color green "\<(while|with|yield)\>"
 color magenta "\<(async|await|function)\>"
 color green "\<(set|get)\>"
 color green "\<(module|namespace)\>"
-color green "\<(declare|parse|stringify)\>"
+color green "\<(declare)\>"
+color brightblue "\<(parse|stringify|log|warn|error|table|map|values|assign|entries|fill|filter|split|join)\>"
 color cyan "\<(import|from|export|default)\>"
 
 ## Type specifiers
@@ -42,10 +43,13 @@ color brightwhite,blue start="\$\{" end="\}"
 color red "\\[0-7][0-7]?[0-7]?|\\x[0-9a-fA-F]+|\\[bfnrt'"\?\\]"
 
 ## Parenthetical olor
-color brightmagenta "[(){}]" "\[" "\]" "\$"
+color white "[(){}]" "\[" "\]" "\$"
 
 ## Operator color
-color red "[+*|=!\/%]" "<" ">" "-" "&"
+color brightmagenta "[+*|=!\%]" "/"  "<" ">" "-" "&"
+
+## Comments highlight
+color blue "\@param" "\@todo" "\@warn"
 
 ## Comments
 color brightblack start="/\*" end="\*/"
